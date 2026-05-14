@@ -6,6 +6,13 @@
   --default-margin: 50px;
 }
 
+
+
+html{
+  padding: 0;
+  margin:0;
+}
+
 body {
   font-family: var(--main-font);
   margin:0;
@@ -13,6 +20,8 @@ body {
 }
 
 nav {
+  position:sticky;
+  top: 0px;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
@@ -20,7 +29,7 @@ nav {
   background-image: linear-gradient(45deg, var(--leaf), white);
   width: 50%;
   margin: auto;
-  border-radius: 50px;
+  border-radius: 0 0 50px 50px;
   padding: 0 10px;
   box-shadow: 0px 5px 10px var(--forest);
 }
@@ -96,6 +105,7 @@ hr {
   width: 50%
 }
 
+
 .download-cv {
   background-color: var(--forest);
   color: var(--leaf);
@@ -104,8 +114,10 @@ hr {
   border-radius: 20px;
   font-weight: bold;
   box-shadow: 0px 2px 10px gray;
-
+  margin-bottom: 10px;
 }
+
+
 
 .download-cv:hover {
   background-color: white;
@@ -124,6 +136,7 @@ hr {
   border-radius: 20px;
   font-weight: bold;
   box-shadow: 0px 2px 10px gray;
+  margin-bottom:10px;
 }
 
 .contact-me:hover {
@@ -135,7 +148,7 @@ hr {
 }
 
 .my-image {
-  width: 400px;
+  width: 300px;
   border-radius: 50%;
 }
 
@@ -144,7 +157,7 @@ hr {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  margin: var(--default-margin) calc(var(--default-margin) * 3);
+  /* margin: var(--default-margin) calc(var(--default-margin) * 3); */
   /* background-color: red; */
 }
 
@@ -158,12 +171,11 @@ hr {
 }
 
 .skills-container {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  grid-template-rows: 1fr 1fr 1fr;
-  /* background-color: blue; */
-  width: 100%;
-  place-items: center;
+  display: flex;
+  flex-wrap:wrap;
+  justify-content: center;
+  align-items: center;
+  margin:0;
 }
 
 .skill {
@@ -172,9 +184,9 @@ hr {
   justify-content: space-around;
   align-items: center;
   margin: 10px;
-  padding: 20px 10px;
+  /* padding: 20px 10px; */
   height: 200px;
-  width: 50%;
+  width: 200px;
   background-color: whitesmoke;
   border-radius: 20px;
   /* box-shadow: 5px 5px 10px var(--forest); */
@@ -210,9 +222,11 @@ hr {
 }
 
 .services-container {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  margin: var(--default-margin) calc(var(--default-margin) * 3);
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin:0;
+  /* margin: var(--default-margin) calc(var(--default-margin) * 3); */
 }
 
 .service {
@@ -223,6 +237,7 @@ hr {
   background-color: whitesmoke;
   /* background-color: #064734; */
   padding: 0 0 10px 0;
+  width:250px;
   border-radius: 20px;
   margin: var(--default-margin);
 }
@@ -266,10 +281,12 @@ hr {
 }
 
 .projects-container {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  display: flex;
+  flex-wrap: wrap;
+  margin:0;
+  padding:0;
   /* grid-template-rows: repeat(3,1fr); */
-  margin: var(--default-margin) calc(var(--default-margin) * 3);
+  /* margin: var(--default-margin) calc(var(--default-margin) * 3); */
 
 }
 
@@ -280,6 +297,7 @@ hr {
   align-items: center;
   background-color: whitesmoke;
   margin: 50px;
+  width: 250px;
   padding: 0 0 10px 0;
   border-radius: 20px;
 }
